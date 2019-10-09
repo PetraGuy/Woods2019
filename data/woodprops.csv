@@ -1,0 +1,20 @@
+site,grazed,species,soil,type,continuity,max annualtemp,min annual temp,rainfall
+fs,y,qp,b,m,100,15,6.5,656.6
+ll,y,qr,c,pk,400,14.6,6.2,708.5
+lw,y,qp,c,m,400,13.6,6.2,745.2
+hp,n,qp,c,m,400,13.8,6.1,613
+gd,y,qp,d,m,400,13.7,7.5,998.9
+bd,y,qp,e,m,400,13.5,6.3,614.6
+fl,y,qp,d,m,400,13.5,6.9,1121
+bw,y,qspp,e,m,400,12,5.3,751.1
+ws,n,qp,a,p,50,10.5,4.3,1550
+gp,y,qp,d,m,200,13.7,6.7,1384.6
+yw,y,qp,f,p,400,13.7,6.7,1384.6
+ww,y,qr,d,p,400,13.7,6.7,1384.6
+wc,y,qp,be,p,400,11.7,6.3,1142.5
+tw,n,qp,be,m,400,12.4,6.4,1226.2
+gw,n,qp,be,m,400,11,3.9,1809.4
+aw,n,qp,h,p,400,11,3.9,1809.4
+do,y,qr,be,m,400,12.2,3.5,780
+dk,y,qr,be,pk,400,12.7,5.9,704.2
+sw,y,qr,a,pk,10,15,6.5,656.6
