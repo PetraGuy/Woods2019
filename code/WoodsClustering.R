@@ -60,6 +60,63 @@ axis(side = 1,at = c(2:19))
 #cluster using any other method and plot results
 woods.clust =eclust(gower_mat,"pam",k = 13,stand = TRUE)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #plot the groups
 #fviz_cluster(woods.clust, repel = TRUE,geom = "text")
 fviz_silhouette(woods.clust)
