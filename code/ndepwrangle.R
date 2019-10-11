@@ -43,7 +43,7 @@ library(maps)
 library(mapproj)
 library(ggmap)
 
-register_google(key = "AIzaSyDgQVk3hW6c0G_xm6K_g-DCbbcTO_d_IkM")
+register_google(key = "key")
 
 UK <- map_data(map = "world", region = "UK") # changed map to "world"
 ggplot(data = UK, aes(x = long, y = lat, group = group)) + 
