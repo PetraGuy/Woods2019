@@ -11,6 +11,7 @@ library(dplyr)
 mysites = read.csv("../data/woodslocs.csv", stringsAsFactors = TRUE, header = TRUE)
 colnames(mysites)[1] = "site"
 UKmap <- map_data(map = "world", region = "UK") # changed map to "world"
+
 ggplot(data = UKmap, aes(x = long, y = lat, group = group)) + 
   geom_polygon(alpha = 0.5) +
   scale_x_continuous(breaks = c(-6,-5,-4,-3,-2,-1,0,1),limits = c(-7,2))+
