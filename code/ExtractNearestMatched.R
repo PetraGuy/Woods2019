@@ -3,6 +3,7 @@
 #used this nearest data table function as there werent exact macthed 
 #therefore dplr filter methods didnt work
 
+
 library(data.table)
 library(dplyr)
 setwd("C:/dev/code/Woods2019/code")
@@ -22,4 +23,4 @@ extracted <- extractdata[mysites, roll = "nearest"]
 
 #save ndep data
 
-saveRDS(extracted, "../data/ndepbysite")
+saveRDS(extracted, "../data/ndepbysite.RDS")
