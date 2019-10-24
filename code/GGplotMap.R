@@ -10,7 +10,7 @@ library(dplyr)
 
 
 #read in the data you want plotted 
-mapdata = readRDS("../data/ndepavelonglat")
+mapdata = readRDS("../data/ndepseplonglat.RDS")
 
 
 #get average ndep for map colour

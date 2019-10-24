@@ -5,14 +5,14 @@
 
 
 library(data.table)
-library(dplyr)
+
 setwd("C:/dev/code/Woods2019/code")
 
 #locations of my sites
 mysites = data.table(read.csv("../data/woodslocs.csv", stringsAsFactors = TRUE, header = TRUE))
 
 #df of data to be extracted
-extractdata = data.table(readRDS("../data/ndepavelonglat"))
+extractdata = data.table(readRDS("../data/ndepseplonglat.RDS"))
 
 #a data table thing
 setkey(mysites,lat)
@@ -23,4 +23,4 @@ extracted <- extractdata[mysites, roll = "nearest"]
 
 #save ndep data
 
-saveRDS(extracted, "../data/ndepbysite.RDS")
+saveRDS(extracted, "../data/ndepsepbysite.RDS")

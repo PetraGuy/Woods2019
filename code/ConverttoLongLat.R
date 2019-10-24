@@ -7,20 +7,17 @@ setwd("C:/dev/code/Woods2019/code")
 library(rgdal)
 
 #this file is sinle year values for total Ndep
-ndepsingle = read.csv("../data/Ndep2014.csv", 
+ndeptotal = read.csv("../data/NdepTotal.csv", 
                 stringsAsFactors = TRUE, 
-                header = TRUE, skip = 6)
+                header = TRUE)
 
 #this file has 3 year aves for No2-No3. NH3-NH4 and SO2-SO3
-ndepave = read.csv("../data/NdepB.csv", 
+ndepsep = read.csv("../data/NdepSep.csv", 
                    stringsAsFactors = TRUE, 
-                   header = TRUE, skip = 19)
-
-#there are some redundant cols, delete them
-ndepave = ndepave[1:5]
-
+                   header = TRUE)
+##########################################################
 #convert to long lat
-#atkes df with col head of Easting and Northing and creates new cols of long lat
+#takes df with col head of Easting and Northing and creates new cols of long lat
 converttolonglat = function(df){
   coords <- cbind(Easting = as.numeric(as.character(df$Easting)),
                   Northing = as.numeric(as.character(df$Northing)))
@@ -40,9 +37,9 @@ converttolonglat = function(df){
   return(df)                              
 }
 
+####################################################
+ndepseplonglat = converttolonglat(ndepsep)
 
-ndeplonglat = converttolonglat(ndepave)
-
-saveRDS(ndeplonglat,"../data/ndepavelonglat")
+saveRDS(ndepseplonglat,"../data/ndepseplonglat.RDS")
  
 

@@ -1,5 +1,7 @@
 
 setwd("C:/dev/code/Woods2019/code")
+#clustering for woodland properties, also did PCA
+
 library(cluster) #for gower distance
 library(dplyr)
 library(Rtsne)
@@ -13,7 +15,7 @@ woods = read.csv("../data/woodprops.csv", stringsAsFactors = TRUE, header = TRUE
 
 
 #compute gower distance
-gower_dist = daisy(woods[,-1],
+gower_dist = daisy(woods[,-c(1:5)],
                    type = list(nominal = c(1,2,3,4)),
                    metric = "gower",
                    stand = TRUE)
@@ -59,61 +61,6 @@ axis(side = 1,at = c(2:19))
 
 #cluster using any other method and plot results
 woods.clust =eclust(gower_mat,"pam",k = 13,stand = TRUE)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
